@@ -1,5 +1,5 @@
 {
-    "name": "mikealmond/musicbrainz",
+    "name": "fm-labs/musicbrainz",
     "type": "library",
     "description": "A PHP library for accessing the MusicBrainz API",
     "keywords": ["musicbrainz", "library", "php", "api"],
