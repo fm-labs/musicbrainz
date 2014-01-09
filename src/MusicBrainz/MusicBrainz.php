@@ -288,6 +288,9 @@ class MusicBrainz
     public function __construct(ClientInterface $client, $user = null, $password = null)
     {
         $this->client = $client;
+        if (!$this->client->getBaseUrl()) {
+            $this->client->setBaseUrl(self::URL);
+        }
 
         if (null != $user) {
             $this->setUser($user);
@@ -453,7 +456,7 @@ class MusicBrainz
             throw new Exception('You must set a valid User Agent before accessing the MusicBrainz API');
         }
 
-        $this->client->setBaseUrl(self::URL);
+        //$this->client->setBaseUrl(self::URL);
         $this->client->setConfig(array(
             'data' => $params
         ));
